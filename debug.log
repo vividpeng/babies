@@ -1,0 +1,4 @@
+[1028/141241.002:ERROR:process_memory_win.cc(73)] ReadMemory at 0x6e6a10d0 of 28 bytes failed: ReadProcessMemory 또는 WriteProcessMemory의 일부 작업만을 마쳤습니다. (0x12B)
+[1028/141241.034:WARNING:pe_image_reader.cc(171)] could not read data directory from C:\WINDOWS\SYSTEM32\msimg32.dll
+[1028/141241.259:ERROR:process_memory_win.cc(73)] ReadMemory at 0x6e6a10d0 of 28 bytes failed: ReadProcessMemory 또는 WriteProcessMemory의 일부 작업만을 마쳤습니다. (0x12B)
+[1028/141241.260:WARNING:pe_image_reader.cc(171)] could not read data directory from C:\WINDOWS\SYSTEM32\msimg32.dll
