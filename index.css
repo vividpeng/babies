@@ -1,0 +1,52 @@
+a {
+  color: grey;
+  text-decoration: none;
+  border-width: 1px;
+  border-color: grey;
+  /*
+    border-style: dotted;
+    display: block; 
+    */
+}
+h1 {
+  font-size: 40px;
+  text-align: center;
+  border: 2px darkgrey solid;
+  /*
+    같음
+    border-width: 2px;
+    border-color: darkgrey;
+    border-style: solid;
+    */
+  /*
+    display: none;
+    */
+  padding: 10px;
+}
+h2,
+h3 {
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 0;
+}
+.babies {
+  color: blue;
+}
+
+/* class는 . 이후에 넣어야한다! 
+  selector 우선 순위: #id > .class (단어 단위로 인식) > element(tag) > 쓰여진 순서
+  */
+@media (min-width: 700px) {
+  ol {
+    border-right: 1px solid lightgray;
+    width: 100px;
+    margin-top: 0;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+/*
+  media query ()안에 조건이 충족될 때만 CSS 발동
+  */
