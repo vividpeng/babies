@@ -56,14 +56,24 @@
     </style>
   </head>
 
-  <body>
+  <body class = "java__test">
     <h1><a href="index.html">Before Birth : 건&강</a></h1>
 
     <! h1~6: head(제목), p: paragraph, u: underline, strong:강조>
 
+    <!--javascript 넣기-->
+    <input type="button" value="night" onclick="
+    document.querySelector('.java__test').style.backgroundColor='black';
+    document.querySelector('.java__test').style.color='white';
+    ">
+    <input type="button" value="day" onclick="
+    document.querySelector('.java__test').style.backgroundColor='white';
+    document.querySelector('.java__test').style.color='black';
+    ">
     <p>
       <strong><u>건강이들</u>이 태어날 때</strong>까지의 기록 모음집
     </p>
+
     <img src="babies.jpg" width="400px" />
     <p style="margin-bottom: 50px;">
       <a href="thanks.html" title="html 교육강의">thanks for education</a>
