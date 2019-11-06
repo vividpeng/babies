@@ -3,81 +3,145 @@
   <head>
     <title>건강이들</title>
     <meta charset="UTF-8" />
-    <style>
-      a {
-        color: grey;
-        text-decoration: none;
-        border-width: 1px;
-        border-color: grey;
-        /*
-        border-style: dotted;
-        display: block; 
-        */
+    <!--
+      <style>    CSS 바로 삽입하는 법!    </style>
+    -->
+    <link rel="stylesheet" href="thanks.css" />
+
+    <!-- js function의 활용 -->
+    <script>
+      function toggler(self) {
+        var shortening = document.querySelector(".java__test");
+        if (self.value === "to night") {
+          shortening.style.backgroundColor = "black";
+          shortening.style.color = "white";
+          self.value = "to day";
+
+          /*while문 예제--> */
+          var alist = document.querySelectorAll("a");
+          var i = 0;
+          while (i < alist.length) {
+            /* console.log(alist[i]); 내용 출력용 code */
+            alist[i].style.color = "powderblue";
+            i = i + 1;
+          }
+          /* <--while문 예제*/
+        } else {
+          shortening.style.backgroundColor = "white";
+          shortening.style.color = "black";
+          self.value = "to night";
+
+          /*while문 예제--> */
+          var alist = document.querySelectorAll("a");
+          var i = 0;
+          while (i < alist.length) {
+            alist[i].style.color = "blue";
+            i = i + 1;
+          }
+          /* <--while문 예제*/
+        }
       }
-      h1 {
-        font-size: 40px;
-        text-align: center;
-        border: 2px darkgrey solid;
-        /*
-        같음
-        border-width: 2px;
-        border-color: darkgrey;
-        border-style: solid;
-        */
-        /*
-        display: none;
-        */
-        padding: 10px;
-      }
-      h2,
-      h3 {
-        border: 1px darkgrey solid;
-        text-align: center;
-        padding: 10px;
-        margin: 1px;
-        display: block;
-        width: 300px;
-      }
-      .babies {
-        color: blue;
-      }
-      #grid {
-        border: 5px solid pink;
-        display: grid;
-        grid-template-columns: 150px 1fr;
-        /*
-        grid?: 신기술.caniuse.com지원율 확인.
-        fr:비율로 알아서 조절해줌.
-        */
-      }
-      div {
-        border: 5px solid gray;
-      }
-    </style>
+    </script>
   </head>
 
-  <body class = "java__test">
+  <body class="java__test">
     <h1><a href="index.html">Before Birth : 건&강</a></h1>
 
     <! h1~6: head(제목), p: paragraph, u: underline, strong:강조>
 
     <!--javascript 넣기-->
-    <input type="button" value="night" onclick="
+    <input
+      type="button"
+      value="night"
+      onclick="
     document.querySelector('.java__test').style.backgroundColor='black';
     document.querySelector('.java__test').style.color='white';
-    ">
-    <input type="button" value="day" onclick="
+    "
+    />
+    <input
+      type="button"
+      value="day"
+      onclick="
     document.querySelector('.java__test').style.backgroundColor='white';
     document.querySelector('.java__test').style.color='black';
-    ">
+    "
+    />
+    <span> Toggle형 버튼:</span>
+    <input
+      class="toggle"
+      type="button"
+      value="to night"
+      onclick="
+    if(document.querySelector('.toggle').value === 'to night'){
+      document.querySelector('.java__test').style.backgroundColor='black';
+    document.querySelector('.java__test').style.color='white';
+    document.querySelector('.toggle').value = 'to day';
+    }
+    else{
+      document.querySelector('.java__test').style.backgroundColor='white';
+    document.querySelector('.java__test').style.color='black';
+    document.querySelector('.toggle').value = 'to night';
+    }
+    "
+    />
     <p>
       <strong><u>건강이들</u>이 태어날 때</strong>까지의 기록 모음집
     </p>
 
     <img src="babies.jpg" width="400px" />
+
     <p style="margin-bottom: 50px;">
       <a href="thanks.html" title="html 교육강의">thanks for education</a>
     </p>
+    <!--버튼 개별로 분리하기. this! 이 요소의 value만 확인하게!-->
+    <!--변수 설정하여 code 줄이기.-->
+
+    <input
+      class="toggle"
+      type="button"
+      value="to night"
+      onclick="
+      var shortening = document.querySelector('.java__test');
+      if(this.value === 'to night'){
+      shortening.style.backgroundColor='black';
+      shortening.style.color='white';
+      this.value = 'to day';
+      
+      /*while문 예제--> */
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+       /* console.log(alist[i]); 내용 출력용 code */
+        alist[i].style.color ='powderblue';
+        i=i+1;
+      }
+      /* <--while문 예제*/
+      }
+      else{
+      shortening.style.backgroundColor='white';
+      shortening.style.color='black';
+      this.value = 'to night';
+
+      /*while문 예제--> */
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color ='blue';
+        i=i+1;
+      }
+      /* <--while문 예제*/
+      }
+      "
+    />
+
+    <!--js fuction이용하여 버튼만들기.-->
+    <input
+      class="toggle"
+      type="button"
+      value="to night"
+      onclick="toggler(this);"
+    />
+
     <h2>CSS</h2>
     <h2>box model</h2>
     <div id="grid">

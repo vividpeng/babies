@@ -1,0 +1,54 @@
+a {
+  color: gray;
+  text-decoration: none;
+  border-width: 1px;
+  border-color: grey;
+  /*
+    border-style: dotted;
+    display: block; 
+    */
+}
+h1 {
+  font-size: 40px;
+  text-align: center;
+  border: 2px darkgrey solid;
+  /*
+    같음
+    border-width: 2px;
+    border-color: darkgrey;
+    border-style: solid;
+    */
+  /*
+    display: none;
+    */
+  padding: 10px;
+}
+h2,
+h3 {
+  border: 1px darkgrey solid;
+  text-align: center;
+  padding: 10px;
+  margin: 1px;
+  display: block;
+  width: 300px;
+}
+.babies {
+  color: blue;
+}
+#grid {
+  border: 5px solid pink;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  /*
+    grid?: 신기술.caniuse.com지원율 확인.
+    fr:비율로 알아서 조절해줌.
+    */
+}
+div {
+  border: 5px solid gray;
+}
+input {
+  background-color: bisque;
+  border-radius: 20px;
+  padding: 10px;
+}
